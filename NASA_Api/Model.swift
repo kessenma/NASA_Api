@@ -5,19 +5,57 @@
 //  Created by Kyle Essenmacher on 8/3/22.
 //
 
-struct NASA_data: Codable {
-    // the author
-    let copyright: String
-    let date: String
-    // the description
-    let explanation: String
-    // the image
-    let hdurl: String
-    let media_type: String
-    let service_version: String
-    let title: String
-    let url: String
+import SwiftUI
+
+struct Nasa_data: Codable {
+    var copyright: String
+    var date: String
+    var explanation: String
+    var hdurl: String?
+    var media_type: String
+    var service_version: String
+    var title: String
+    var url: String
 }
+
+//static func example1() -> Nasa_data {
+//    return Nasa_data(copyright: "Abyssinian",
+//                 Date: "abys",
+//                 explaination: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+//                     hdurl: "Active, Energetic, Independent, Intelligent, Gentle",
+//                     media_type: 5,
+//                     service_version: false, image: BreedImage(height: 100, id: "i", url: "https://cdn2.thecatapi.com/images/unX21IBVB.jpg", width: 100))
+//    
+//}
+//struct Nasa_data: Codable {
+////    var id = UUID()
+//    // the author
+//    var copyright: String
+//    // the description
+//    var explanation: String
+//    // the image
+//    var hdurl: String
+//}
+
+
+
+
+
+
+//
+//
+//class Api {
+//    func getPosts() {
+//        guard let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY") else { return }
+//
+//        URLSession.shared.dataTask(with: url) { (data, _, _) in
+//            let posts = try! JSONDecoder().decode([Post].self, from: data!)
+//            print(posts)
+//        }
+//        .resume()
+//    }
+//}
+
 
 //extension NASA_data {
 //
